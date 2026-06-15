@@ -1,5 +1,12 @@
+import { Mail, MessageCircle } from "lucide-react";
 import { socials } from "./SocialIcons";
 import { Button } from "@/components/ui/button";
+import {
+  WHATSAPP_URL,
+  WHATSAPP_DISPLAY,
+  MAILTO_URL,
+  CONTACT_EMAIL,
+} from "@/lib/contact";
 
 export const Footer = () => (
   <footer id="contact" className="bg-charcoal text-bone">
@@ -23,26 +30,51 @@ export const Footer = () => (
               Subscribe
             </Button>
           </form>
+
+          <div className="mt-8">
+            <h4 className="text-xs uppercase tracking-[0.25em] text-bone/60 mb-4">Get in touch</h4>
+            <div className="flex flex-col gap-3 text-sm">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 text-bone/85 hover:text-clay transition-colors"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-colors">
+                  <MessageCircle className="h-4 w-4" />
+                </span>
+                <span>WhatsApp · {WHATSAPP_DISPLAY}</span>
+              </a>
+              <a
+                href={MAILTO_URL}
+                className="group flex items-center gap-3 text-bone/85 hover:text-clay transition-colors"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-clay/20 text-clay group-hover:bg-clay group-hover:text-bone transition-colors">
+                  <Mail className="h-4 w-4" />
+                </span>
+                <span>{CONTACT_EMAIL}</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-bone/60 mb-4">Shop</h4>
           <ul className="space-y-2 text-sm text-bone/85">
-            <li><a href="#shop" className="hover:text-clay">All</a></li>
-            <li><a href="#" className="hover:text-clay">Hoodies</a></li>
-            <li><a href="#" className="hover:text-clay">Cargos</a></li>
-            <li><a href="#" className="hover:text-clay">Tees</a></li>
-            <li><a href="#" className="hover:text-clay">Accessories</a></li>
+            <li><a href="/" className="hover:text-clay">Home</a></li>
+            <li><a href="/desi" className="hover:text-clay">Desi Clothes</a></li>
+            <li><a href="/western" className="hover:text-clay">Western Clothes</a></li>
+            <li><a href="/cart" className="hover:text-clay">Cart</a></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-bone/60 mb-4">Help</h4>
           <ul className="space-y-2 text-sm text-bone/85">
+            <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-clay">Support</a></li>
+            <li><a href={MAILTO_URL} className="hover:text-clay">Email Us</a></li>
             <li><a href="#" className="hover:text-clay">Shipping</a></li>
             <li><a href="#" className="hover:text-clay">Returns</a></li>
-            <li><a href="#" className="hover:text-clay">Sizing</a></li>
-            <li><a href="#" className="hover:text-clay">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -57,7 +89,7 @@ export const Footer = () => (
               aria-label={s.name}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-bone/75 hover:text-clay transition-colors"
+              className="text-bone/75 hover:text-clay hover:scale-110 transition-all"
             >
               <s.icon className="h-5 w-5" />
             </a>

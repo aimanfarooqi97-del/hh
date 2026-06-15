@@ -1,9 +1,10 @@
-import { Search, ShoppingBag, Menu, X } from "lucide-react";
+import { Search, ShoppingBag, Menu, X, Mail, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { socials } from "./SocialIcons";
 import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_URL, MAILTO_URL } from "@/lib/contact";
 
 const links = [
   { to: "/", label: "Home" },
@@ -61,9 +62,32 @@ export const Navbar = () => {
           <button onClick={() => setSearch(!search)} aria-label="Search" className="text-foreground/80 hover:text-clay transition-colors">
             <Search className="h-5 w-5" />
           </button>
-          <div className="hidden lg:flex items-center gap-2 text-foreground/70">
-            {socials.slice(0, 3).map((s) => (
-              <a key={s.name} href={s.href} aria-label={s.name} className="hover:text-clay transition-colors">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="text-foreground/80 hover:text-[#25D366] hover:scale-110 transition-all"
+          >
+            <MessageCircle className="h-5 w-5" />
+          </a>
+          <a
+            href={MAILTO_URL}
+            aria-label="Email us"
+            className="text-foreground/80 hover:text-clay hover:scale-110 transition-all"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <div className="hidden lg:flex items-center gap-3 text-foreground/70 border-l border-border pl-3">
+            {socials.map((s) => (
+              <a
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.name}
+                className="hover:text-clay hover:scale-110 transition-all"
+              >
                 <s.icon className="h-4 w-4" />
               </a>
             ))}
