@@ -1,10 +1,4 @@
-import { Instagram, Youtube, Facebook } from "lucide-react";
-
-const TikTokIcon = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-    <path d="M19.6 6.3a4.9 4.9 0 0 1-3-1.1 4.9 4.9 0 0 1-1.7-2.9h-3.3v13a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.4a6 6 0 1 0 5.1 6V9.7a8.2 8.2 0 0 0 4.7 1.5V7.9a4.9 4.9 0 0 1 0-1.6z"/>
-  </svg>
-);
+import { Instagram, Facebook } from "lucide-react";
 
 const XIcon = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
@@ -12,19 +6,17 @@ const XIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-const ThreadsIcon = ({ className = "" }: { className?: string }) => (
+const PinterestIcon = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-    <path d="M17.6 11.1c-.1 0-.2-.1-.3-.1-.2-3.1-1.9-4.9-4.7-4.9-1.7 0-3.1.7-4 2l1.6 1.1c.6-1 1.5-1.2 2.4-1.2 1.5 0 2.5.9 2.7 2.6-.7-.1-1.4-.2-2.2-.2-2.5 0-4.2 1.4-4.2 3.4 0 1.9 1.6 3.2 3.5 3.2 1.6 0 3-.6 3.6-1.9.7.4 1.2 1 1.5 1.7C18 18 16.6 19 14 19c-3.4 0-5.7-2.3-5.7-6.9S10.6 5.2 14 5.2c3 0 4.9 1.5 5.6 4.5l1.9-.6C20.5 5.4 17.9 3.3 14 3.3 9.4 3.3 6.3 6.5 6.3 12.1S9.4 20.9 14 20.9c4.1 0 6.4-2 6.4-5.4 0-1.7-.6-3.1-1.8-4.1-.3-.1-.6-.2-1-.3zm-3.8 4.4c-.9 0-1.6-.5-1.6-1.3 0-.9 1-1.5 2.4-1.5.6 0 1.2.1 1.7.2-.1 1.6-1.1 2.6-2.5 2.6z"/>
+    <path d="M12 2a10 10 0 0 0-3.64 19.32c-.09-.78-.18-1.99.04-2.85.2-.77 1.27-4.9 1.27-4.9s-.32-.65-.32-1.6c0-1.5.87-2.62 1.95-2.62.92 0 1.36.69 1.36 1.52 0 .92-.59 2.31-.89 3.59-.26 1.07.54 1.95 1.6 1.95 1.92 0 3.39-2.02 3.39-4.94 0-2.58-1.86-4.39-4.51-4.39-3.07 0-4.88 2.3-4.88 4.69 0 .93.36 1.92.81 2.47.09.1.1.2.07.31-.08.32-.25 1.07-.29 1.22-.05.2-.15.24-.36.15-1.33-.62-2.16-2.57-2.16-4.13 0-3.36 2.44-6.45 7.04-6.45 3.7 0 6.57 2.64 6.57 6.16 0 3.67-2.32 6.63-5.53 6.63-1.08 0-2.1-.56-2.45-1.23l-.66 2.54c-.24.93-.89 2.1-1.32 2.81A10 10 0 1 0 12 2z"/>
   </svg>
 );
 
 export const socials = [
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-  { name: "TikTok", icon: TikTokIcon, href: "https://tiktok.com" },
-  { name: "YouTube", icon: Youtube, href: "https://youtube.com" },
-  { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-  { name: "X", icon: XIcon, href: "https://x.com" },
-  { name: "Threads", icon: ThreadsIcon, href: "https://threads.net" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/aimanfarooqi.97/" },
+  { name: "Pinterest", icon: PinterestIcon, href: "https://www.pinterest.com/Aimanfarooqi97/" },
+  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579475137171" },
+  { name: "X", icon: XIcon, href: "https://x.com/aimanfarooqi97" },
 ];
 
-export { TikTokIcon, XIcon, ThreadsIcon };
+export { XIcon, PinterestIcon };
